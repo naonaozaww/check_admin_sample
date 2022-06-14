@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <h1>Show Post</h1>
+      <div class="text-right mb-3">
+        <%= link_to t('defaults.edit'), edit_admin_post_path(@post), class: 'btn btn-success' %>
+        <%= link_to t('defaults.delete'), admin_post_path(@post), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger' %>
+      </div>
+      <table class="table table-bordered bg-white">
+        <tr>
+          <th scope="row">Id</th>
+          <td><%= @post.id %></td>
+        </tr>
+        <tr>
+          <th scope="row">Title</th>
+          <td><%= @post.title %></td>
+        </tr>
+        <tr>
+          <th scope="row">Body</th>
+          <td><%= @post.content %></td>
+        </tr>
+        <tr>
+          <th scope="row">Created_at</th>
+          <td><%= l @post.created_at, format: :long %></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

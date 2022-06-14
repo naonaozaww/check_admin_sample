@@ -1,0 +1,11 @@
+<tr>
+  <td><%= post.id %></td>
+  <td><%= post.title %></td>
+  <td><%= post.content %></td>
+  <td><%= post.created_at %></td>
+  <td>
+    <%= link_to 'Show', admin_post_path(post), class: 'btn btn-info' %>
+    <%= link_to 'Edit', edit_admin_post_path(post), class: 'btn btn-success' %>
+    <%= link_to 'Delete', admin_post_path(post), class: 'btn btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %>
+  </td>
+</tr>
